@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: linear-gradient(rgba(18, 16, 13, 0.96), rgba(18, 16, 13, 0.96));
+    color: #e8dfd0;
+    line-height: 1.7
+}
+
+header {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(15, 14, 12, 0.75), rgba(15, 14, 12, 0.95)), url("assets/header-car.jpg") center / cover no-repeat;
+    border-bottom: 4px solid #b58b4c;
+}
+
+header h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 #1a1713, 0 0 20px rgba(214, 170, 98, 0.25);
+    margin-bottom: 20pt;
+}
+
+header p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #d8cbb8;
+    margin-bottom: 45px;
+}
+
+nav {
+    width: 100%;
+    max-width: 1100px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 10px 16px;
+    color: #e6d5b8;
+    text-decoration: none;
+    border: 1px solid #6e593b;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+nav a:hover {
+    background: #b58b4c;
+    color: #17130e;
+    border-color: #d6aa62;
+    transform: translateY(-3px);
+}
+
+main {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+#introducao {
+    max-width: 850px;
+    margin: 0 auto 80px;
+    text-align: center;
+    padding: 50px 40px;
+    border-top: 1px solid #6e593b;
+    border-bottom: 1px solid #6e593b;
+}
+
+#introducao h2 {
+    color: #d6aa62;
+   font-size: 25px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+#introducao p {
+    color: #cfc2ae;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+main>section:not(#introducao) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 90px;
+    padding: 35px;
+    background: linear-gradient(145deg, #25211c, #181613);
+    border: 1px solid #4e402d;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+    position: relative;
+    overflow: hidden;
+}
+
+main>section:not(#introducao)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #b58b4c;
+}
+
+main>section:not(#introducao) h2 {
+    grid-column: 1/-1;
+    color: #d6aa62;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #55452f;
+    padding-bottom: 15px;
+}
+
+
+figure {
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #665337;
+    background: #11100e;
+
+}
+
+figure img {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+figure:hover img {
+    transform: scale(1.07);
+    filter: brightness(1.12);
+}
+
+
+figcaption {
+    padding: 12px;
+    text-align: center;
+    color: #d6aa62;
+    background: #12100d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+article {
+    padding: 10px;
+}
+
+article h3 {
+    color: #c49a5a;
+    text-transform: uppercase;
+    initial-letter: 1px;
+    margin-bottom: 20px;
+}
+
+article p {
+    color: #cfc5b7;
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+
+main>section:not(#introducao) {
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+main>section:not(#introducao):hover {
+    transform: translateY(-8px);
+    border-color: #8c6b3e;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    background: #0e0d0b;
+    border-top: 3px solid #b58b4c;
+}
+
+footer p {
+    color: #958875;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+footer::before {
+    content: "★";
+    display: block;
+    color: #b58b4c;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+
+
+
