@@ -224,4 +224,125 @@ footer::before {
 
 
 
+@media (max-width:900px) {
+    main>section:not(#introducao) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 
+    main>section:not(#introducao) h2 {
+        grid-column: auto;
+        font-size: 2rem;
+    }
+
+    figure img {
+        height: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        min-height: 50px;
+        padding: 60px 15px;
+    }
+
+    header h1 {
+        font-size: 2.3rem;
+        letter-spacing: 2px;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        padding: 50px 0;
+    }
+
+    #introducao {
+        padding: 35px 20px;
+        margin-bottom: 50px;
+    }
+
+    #introducao h2 {
+        font-size: 1.7rem;
+    }
+
+    main>section:not(#introducao) {
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    main>section:not(#introducao) h2 {
+        font-size: 1.7rem;
+    }
+
+    figure img {
+        height: 240px;
+    }
+
+    article p {
+        font-size: 0.95rem;
+    }
+
+    a:focus-visible {
+        outline: 3px solid #d6aa62;
+        outline-offset: 4px;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .modal.ativo {
+        display: flex;
+    }
+
+    #imagemModal {
+        max-width: 90%;
+        max-height: 80vh;
+        object-fit: contain;
+        border: 3px solid #b58b4c;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    }
+
+    #legendaModal {
+        margin-top: 15px;
+        color: #d6aa62;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #fecharModal {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        font-size: 3rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    #fecharModal:hover {
+        color: #d6aa62;
+    }
+}
